@@ -25,7 +25,9 @@ async function parseInputLineByLine(parseLine = null) {
     } else {
       const fileContent = await readLine();
       const allLines = fileContent.split("\n");
-      input = allLines.slice(1); // skip the 1st line
+      input = allLines
+        .slice(1) // skip the 1st line, it's the number of cases
+        .map(parseLine ? parseLine : x => x);
     }
     return input;
   } catch (e) {
