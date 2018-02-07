@@ -28,9 +28,7 @@ function readInputFiles(
 }
 
 function outputToFile(fileName: string, results: string[]): void {
-  console.log("file", fileName);
   const dir = fileName.replace(/\/[^\/]+$/, "");
-  console.log("dir", dir);
   if (!existsSync(dir)) {
     mkdirSync(dir);
   }
