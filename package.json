@@ -1,0 +1,35 @@
+{
+  "name": "google-codejams",
+  "version": "0.0.1",
+  "description": "Fun, fun, fun: solving Google code jam",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "precommit": "pretty-quick --staged",
+    "start": "bash -c 'yarn flow-node ${1}/main.js' 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dimofte/google-codejams.git"
+  },
+  "author": "Bogdan Dimofte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dimofte/google-codejams/issues"
+  },
+  "homepage": "https://github.com/dimofte/google-codejams#readme",
+  "devDependencies": {
+    "flow-bin": "^0.65.0",
+    "flow-remove-types": "^1.2.3",
+    "husky": "^0.14.3",
+    "jest-cli": "^21.2.1",
+    "jest-flow-transform": "^1.0.1",
+    "prettier": "1.10.2",
+    "pretty-quick": "^1.3.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js(?:\\.flow)?$": "jest-flow-transform"
+    }
+  }
+}
