@@ -7,6 +7,8 @@ const readLine = () =>
   });
 
 /**
+ * @deprecated Use readInputFiles() instead
+ * @see ./readInputFiles.js
  * Reads input from a file, line by line. The first line is always the number of lines that follow (this format is given in the problems)
  * @param {function} parseLine A callback to use for processing each line except the first
  * @returns {Array}
