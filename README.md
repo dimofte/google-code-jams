@@ -4,6 +4,7 @@ Problems from Google Code Jam, each in the homonym directory:
 
 * oversized-pancake-flipper: [specs](https://code.google.com/codejam/contest/3264486/dashboard#s=p0&a=4)
 * tidy-numbers: [specs](https://code.google.com/codejam/contest/3264486/dashboard#s=p1&a=4)
+* bathroom-stalls: [specs](https://code.google.com/codejam/contest/3264486/dashboard#s=p2&a=4)
 
 ## Testing
 
