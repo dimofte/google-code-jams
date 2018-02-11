@@ -18,4 +18,10 @@ It takes files from `./oversized-pancake-flipper/in` and outputs into `./oversiz
 
 Note: problem "tidy-numbers" uses a deprecated system (takes data from stdin and outputs to stdout). Use `yarn start tidy-numbers < file.in > file.out`
 
-For development, I've added unit testing with `jest` (see the `npm` scripts).
+For development, I've added unit testing with `jest`. Specific tests can be run like this:
+
+```
+yarn test bathroom-stalls
+```
+
+Or `test:watch` (see npm scripts).

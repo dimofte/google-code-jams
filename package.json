@@ -1,10 +1,10 @@
 {
   "name": "google-codejams",
   "version": "0.0.1",
-  "description": "Fun, fun, fun: solving Google code jam",
+  "description": "Fun, fun - Google code jam",
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch",
+    "test": "bash -c 'yarn jest ${1}' 0",
+    "test:watch": "bash -c 'yarn jest ${1} --watch' 0",
     "precommit": "pretty-quick --staged",
     "start": "bash -c 'yarn flow-node ${1}/main.js' 0"
   },
