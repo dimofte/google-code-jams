@@ -1,10 +1,10 @@
-const { stdin } = process;
-stdin.setEncoding("utf8");
+const { stdin } = process
+stdin.setEncoding('utf8')
 const readLine = () =>
   new Promise((resolve, reject) => {
-    stdin.once("data", resolve);
-    stdin.once("error", reject);
-  });
+    stdin.once('data', resolve)
+    stdin.once('error', reject)
+  })
 
 /**
  * @deprecated Use readInputFiles() instead
@@ -15,26 +15,26 @@ const readLine = () =>
  */
 async function parseInputLineByLine(parseLine = null) {
   try {
-    let input = [];
+    let input = []
     if (stdin.end) {
-      const numberOfCases = await readLine();
+      const numberOfCases = await readLine()
       // stdin was not redirected to a file (it's keyboard)
       for (let i = 0; i < numberOfCases; i++) {
-        const rawLine = (await readLine()).split("\n")[0];
-        input.push(parseLine ? parseLine(rawLine) : rawLine);
+        const rawLine = (await readLine()).split('\n')[0]
+        input.push(parseLine ? parseLine(rawLine) : rawLine)
       }
-      stdin.end();
+      stdin.end()
     } else {
-      const fileContent = await readLine();
-      const allLines = fileContent.split("\n");
+      const fileContent = await readLine()
+      const allLines = fileContent.split('\n')
       input = allLines
         .slice(1) // skip the 1st line, it's the number of cases
-        .map(parseLine ? parseLine : x => x);
+        .map(parseLine ? parseLine : x => x)
     }
-    return input;
+    return input
   } catch (e) {
-    console.error(e);
+    console.error(e)
   }
 }
 
-module.exports = { parseInputLineByLine };
+module.exports = { parseInputLineByLine }
